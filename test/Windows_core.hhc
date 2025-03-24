@@ -1,0 +1,894 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Foreground" value="0xff0000">
+	<param name="Window Styles" value="0x800025">
+<param name="Font" value="宋体,12,0">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="WINDOWS核心编程目录">
+		<param name="Local" value="Index.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第一部分 程序员必读">
+		<param name="Local" value="1.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第1章 对程序错误的处理">
+			<param name="Local" value="1.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="1.1 定义自己的错误代码">
+				<param name="Local" value="1.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="1.2 ErrorShow示例应用程序">
+				<param name="Local" value="1.htm#02">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第2章 Unicode">
+			<param name="Local" value="2.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.1 字符集">
+				<param name="Local" value="2.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.2 为什么使用Unicode">
+				<param name="Local" value="2.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.3 Windows 2000与Unicode">
+				<param name="Local" value="2.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.4 Windows 98与Unicode">
+				<param name="Local" value="2.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.5 Windows CE与Unicode">
+				<param name="Local" value="2.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.6 需要注意的问题">
+				<param name="Local" value="2.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.7 对COM的简单说明">
+				<param name="Local" value="2.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.8 如何编写Unicode源代码">
+				<param name="Local" value="2.htm#08">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="2.9 成为符合ANSI和Unicode的应用程序">
+				<param name="Local" value="2.htm#09">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第3章 内核对象">
+			<param name="Local" value="3.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.1 什么是内核对象">
+				<param name="Local" value="3.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.2 进程的内核对象句柄表">
+				<param name="Local" value="3.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="3.3 跨越进程边界共享内核对象">
+				<param name="Local" value="3.htm#03">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第二部分 编程的具体方法">
+		<param name="Local" value="4.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第4章 进程">
+			<param name="Local" value="4.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="4.1 编写第一个Windows应用程序">
+				<param name="Local" value="4.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="4.2 CreateProcess函数">
+				<param name="Local" value="4.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="4.3 终止进程的运行">
+				<param name="Local" value="4.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="4.4 子进程">
+				<param name="Local" value="4.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="4.5 枚举系统中运行的进程">
+				<param name="Local" value="4.htm#05">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第5章 作业">
+			<param name="Local" value="5.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="5.1 对作业进程的限制">
+				<param name="Local" value="5.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="5.2 将进程放入作业">
+				<param name="Local" value="5.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="5.3 终止作业中所有进程的运行">
+				<param name="Local" value="5.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="5.4 查询作业统计信息">
+				<param name="Local" value="5.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="5.5 作业通知信息">
+				<param name="Local" value="5.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="5.6 JobLab示例应用程序">
+				<param name="Local" value="5.htm#06">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第6章 线程的基础知识">
+			<param name="Local" value="6.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.1 何时创建线程">
+				<param name="Local" value="6.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.2 何时不能创建线程">
+				<param name="Local" value="6.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.3 编写第一个线程函数">
+				<param name="Local" value="6.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.4 CreateThread函数">
+				<param name="Local" value="6.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.5 终止线程的运行">
+				<param name="Local" value="6.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.6 线程的一些性质">
+				<param name="Local" value="6.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.7 C/C++运行期库的考虑">
+				<param name="Local" value="6.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="6.8 对自己的ID概念应该有所了解">
+				<param name="Local" value="6.htm#08">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第7章 线程的调度、优先级和亲缘性">
+			<param name="Local" value="7.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.1 暂停和恢复线程的运行">
+				<param name="Local" value="7.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.2 暂停和恢复进程的运行">
+				<param name="Local" value="7.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.3 睡眠方式">
+				<param name="Local" value="7.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.4 转换到另一个线程">
+				<param name="Local" value="7.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.5 线程的运行时间">
+				<param name="Local" value="7.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.6 运用结构环境">
+				<param name="Local" value="7.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.7 线程的优先级">
+				<param name="Local" value="7.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.8 对优先级的抽象说明">
+				<param name="Local" value="7.htm#08">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.9 程序的优先级">
+				<param name="Local" value="7.htm#09">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="7.10 亲缘性">
+				<param name="Local" value="7.htm#10">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第8章 用户方式中线程的同步">
+			<param name="Local" value="8.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="8.1 原子访问：互锁的函数家族">
+				<param name="Local" value="8.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="8.2 高速缓存行">
+				<param name="Local" value="8.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="8.3 高级线程同步">
+				<param name="Local" value="8.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="8.4 关键代码段">
+				<param name="Local" value="8.htm#04">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第9章 线程与内核对象的同步">
+			<param name="Local" value="9.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.1 等待函数">
+				<param name="Local" value="9.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.2 成功等待的副作用">
+				<param name="Local" value="9.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.3 事件内核对象">
+				<param name="Local" value="9.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.4 等待定时器内核对象">
+				<param name="Local" value="9.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.5 信标内核对象">
+				<param name="Local" value="9.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.6 互斥对象内核对象">
+				<param name="Local" value="9.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.7 线程同步对象速查表">
+				<param name="Local" value="9.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="9.8 其他的线程同步函数">
+				<param name="Local" value="9.htm#08">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第10章 线程同步工具包">
+			<param name="Local" value="10.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="10.1 实现关键代码段：Optex">
+				<param name="Local" value="10.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="10.2 创建线程安全的数据类型和反信标">
+				<param name="Local" value="10.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="10.3 单个写入程序/多个阅读程序的保护">
+				<param name="Local" value="10.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="10.4 实现一个WaitForMultipleExpressions函数">
+				<param name="Local" value="10.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第11章 线程池的使用">
+			<param name="Local" value="11.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="11.1 方案1：异步调用函数">
+				<param name="Local" value="11.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="11.2 方案2：按规定的时间间隔调用函数">
+				<param name="Local" value="11.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="11.3 方案3：当单个内核对象变为已通知状态时调用函数">
+				<param name="Local" value="11.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="11.4 方案4：当异步I / O请求完成运行时调用函数">
+				<param name="Local" value="11.htm#04">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第12章 纤程">
+			<param name="Local" value="12.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="12.1 纤程的操作">
+				<param name="Local" value="12.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="12.2 Counter示例应用程序">
+				<param name="Local" value="12.htm#02">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第三部分 内存管理">
+		<param name="Local" value="13.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第13章 Windows的内存结构">
+			<param name="Local" value="13.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.1 进程的虚拟地址空间">
+				<param name="Local" value="13.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.2 虚拟地址空间如何分区">
+				<param name="Local" value="13.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.3 地址空间中的区域">
+				<param name="Local" value="13.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.4 提交地址空间区域中的物理存储器">
+				<param name="Local" value="13.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.5 物理存储器与页文件">
+				<param name="Local" value="13.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.6 保护属性">
+				<param name="Local" value="13.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.7 综合使用所有的元素">
+				<param name="Local" value="13.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="13.8 数据对齐的重要性">
+				<param name="Local" value="13.htm#08">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第14章 虚拟内存">
+			<param name="Local" value="14.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="14.1 系统信息">
+				<param name="Local" value="14.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="14.2 虚拟内存的状态">
+				<param name="Local" value="14.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="14.3 确定地址空间的状态">
+				<param name="Local" value="14.htm#03">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第15章 在应用程序中使用虚拟内存">
+			<param name="Local" value="15.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.1 在地址空间中保留一个区域">
+				<param name="Local" value="15.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.2 在保留区域中的提交存储器">
+				<param name="Local" value="15.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.3 同时进行区域的保留和内存的提交">
+				<param name="Local" value="15.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.4 何时提交物理存储器">
+				<param name="Local" value="15.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.5 回收虚拟内存和释放地址空间区域">
+				<param name="Local" value="15.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.6 改变保护属性">
+				<param name="Local" value="15.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.7 清除物理存储器的内容">
+				<param name="Local" value="15.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="15.8 地址窗口扩展———适用于Windows 2000">
+				<param name="Local" value="15.htm#08">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第16章 线程的堆栈">
+			<param name="Local" value="16.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="16.1 Windows 98下的线程堆栈">
+				<param name="Local" value="16.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="16.2 C/C++运行期库的堆栈检查函数">
+				<param name="Local" value="16.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="16.3 Summation示例应用程序">
+				<param name="Local" value="16.htm#03">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第17章 内存映射文件">
+			<param name="Local" value="17.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.1 内存映射的可执行文件和DLL文件">
+				<param name="Local" value="17.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.2 内存映射数据文件">
+				<param name="Local" value="17.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.3 使用内存映射文件">
+				<param name="Local" value="17.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.4 使用内存映射文件来处理大文件">
+				<param name="Local" value="17.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.5 内存映射文件与数据视图的相关性">
+				<param name="Local" value="17.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.6 设定内存映射文件的基地址">
+				<param name="Local" value="17.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.7 实现内存映射文件的具体方法">
+				<param name="Local" value="17.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.8 使用内存映射文件在进程之间共享数据">
+				<param name="Local" value="17.htm#08">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.9 页文件支持的内存映射文件">
+				<param name="Local" value="17.htm#09">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="17.10 稀疏提交的内存映射文件">
+				<param name="Local" value="17.htm#10">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第18章 堆栈">
+			<param name="Local" value="18.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="18.1 进程的默认堆栈">
+				<param name="Local" value="18.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="18.2 为什么要创建辅助堆栈">
+				<param name="Local" value="18.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="18.3 如何创建辅助堆栈">
+				<param name="Local" value="18.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="18.4 其他堆栈函数">
+				<param name="Local" value="18.htm#04">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第四部分 动态链接库">
+		<param name="Local" value="19.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第19章 DLL基础">
+			<param name="Local" value="19.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="19.1 DLL与进程的地址空间">
+				<param name="Local" value="19.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="19.2 DLL的总体运行情况">
+				<param name="Local" value="19.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="19.3 创建DLL模块">
+				<param name="Local" value="19.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="19.4 创建可执行模块">
+				<param name="Local" value="19.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="19.5 运行可执行模块">
+				<param name="Local" value="19.htm#05">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第20章 DLL的高级操作技术">
+			<param name="Local" value="20.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.1 DLL模块的显式加载和符号链接">
+				<param name="Local" value="20.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.2 DLL的进入点函数">
+				<param name="Local" value="20.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.3 延迟加载DLL">
+				<param name="Local" value="20.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.4 函数转发器">
+				<param name="Local" value="20.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.5 已知的DLL">
+				<param name="Local" value="20.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.6 DLL转移">
+				<param name="Local" value="20.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.7 改变模块的位置">
+				<param name="Local" value="20.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="20.8 绑定模块">
+				<param name="Local" value="20.htm#08">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第21章 线程本地存储器">
+			<param name="Local" value="21.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="21.1 动态TLS">
+				<param name="Local" value="21.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="21.2 静态TLS">
+				<param name="Local" value="21.htm#02">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第22章 插入DLL和挂接API">
+			<param name="Local" value="22.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.1 插入DLL：一个例子">
+				<param name="Local" value="22.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.2 使用注册表来插入DLL">
+				<param name="Local" value="22.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.3 使用Windows挂钩来插入DLL">
+				<param name="Local" value="22.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.4 使用远程线程来插入DLL">
+				<param name="Local" value="22.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.5 使用特洛伊DLL来插入DLL">
+				<param name="Local" value="22.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.6 将DLL作为调试程序来插入">
+				<param name="Local" value="22.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.7 用Windows 98上的内存映射文件插入代码">
+				<param name="Local" value="22.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.8 用CreateProcess插入代码">
+				<param name="Local" value="22.htm#08">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="22.9 挂接API的一个示例">
+				<param name="Local" value="22.htm#09">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第五部分 结构化异常处理">
+		<param name="Local" value="23.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第23章 结束处理程序">
+			<param name="Local" value="23.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.1 通过例子理解结束处理程序">
+				<param name="Local" value="23.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.2 Funcenstein1">
+				<param name="Local" value="23.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.3 Funcenstein2">
+				<param name="Local" value="23.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.4 Funcenstein3">
+				<param name="Local" value="23.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.5 Funcfurter1">
+				<param name="Local" value="23.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.6 突击测验：FuncaDoodleDoo">
+				<param name="Local" value="23.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.7 Funcenstein4">
+				<param name="Local" value="23.htm#07">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.8 Funcarama1">
+				<param name="Local" value="23.htm#08">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.9 Funcarama2">
+				<param name="Local" value="23.htm#09">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.10 Funcarama3">
+				<param name="Local" value="23.htm#10">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.11 Funcarama4：最终的边界">
+				<param name="Local" value="23.htm#11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.12 关于finally块的说明">
+				<param name="Local" value="23.htm#12">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.13 Funcfurter2">
+				<param name="Local" value="23.htm#13">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="23.14 SEH结束处理示例程序">
+				<param name="Local" value="23.htm#14">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第24章 异常处理程序和软件异常">
+			<param name="Local" value="24.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.1 通过例子理解异常过滤器和异常处理程序">
+				<param name="Local" value="24.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.2 EXCEPTION_EXECUTE_HANDLER">
+				<param name="Local" value="24.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.3 EXCEPTION_CONTINUE_EXECUTION">
+				<param name="Local" value="24.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.4 EXCEPTION_CONTINUE_SEARCH">
+				<param name="Local" value="24.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.5 GetExceptionCode">
+				<param name="Local" value="24.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.6 GetExceptionInformation">
+				<param name="Local" value="24.htm#06">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="24.7 软件异常">
+				<param name="Local" value="24.htm#07">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第25章 未处理异常和C++异常">
+			<param name="Local" value="25.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="25.1 即时调试">
+				<param name="Local" value="25.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="25.2 关闭异常消息框">
+				<param name="Local" value="25.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="25.3 程序员自己调用UnhandledExceptionFilter">
+				<param name="Local" value="25.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="25.4 UnhandledExceptionFilter函数的一些细节">
+				<param name="Local" value="25.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="25.5 异常与调试程序">
+				<param name="Local" value="25.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="25.6 C++异常与结构性异常的对比">
+				<param name="Local" value="25.htm#06">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第六部分 窗口">
+		<param name="Local" value="26.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第26章 窗口消息">
+			<param name="Local" value="26.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="26.1 线程的消息队列">
+				<param name="Local" value="26.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="26.2 将消息发送到线程的消息队列中">
+				<param name="Local" value="26.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="26.3 向窗口发送消息">
+				<param name="Local" value="26.htm#03">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="26.4 唤醒一个线程">
+				<param name="Local" value="26.htm#04">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="26.5 通过消息发送数据">
+				<param name="Local" value="26.htm#05">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="26.6 Windows如何处理ANSI/Unicode字符和字符串">
+				<param name="Local" value="26.htm#06">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="第27章 硬件输入模型和局部输入状态">
+			<param name="Local" value="27.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="27.1 原始输入线程">
+				<param name="Local" value="27.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="27.2 局部输入状态">
+				<param name="Local" value="27.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="27.3 将虚拟输入队列同局部输入状态挂接在一起">
+				<param name="Local" value="27.htm#03">
+				</OBJECT>
+		</UL>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="第七部分 附录">
+		<param name="Local" value="28.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="附录A 建立环境">
+			<param name="Local" value="28.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="A.1 CmmHdr. h头文件">
+				<param name="Local" value="28.htm#01">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="附录B 消息分流器、子控件宏和API宏">
+			<param name="Local" value="29.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="B.1 消息分流器">
+				<param name="Local" value="29.htm#01">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="B.2 子控件宏">
+				<param name="Local" value="29.htm#02">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="B.3 API宏">
+				<param name="Local" value="29.htm#03">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

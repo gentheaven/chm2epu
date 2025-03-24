@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>COM 组件设计与应用（一）--雪尽马蹄轻</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<META http-equiv=Pragma content=no-cache>
+<META http-equiv=Cache-Control content=no-cache>
+<META http-equiv=Expires content=0>
+<META 
+content="在Visual C++中使用内联汇编COM 组件设计与应用（一）COM组件设计与应用（二）  博客 博客中国 博客动力 blog blogdriver blogger 中国" 
+name=description>
+<META 
+content="雪尽马蹄轻 在Visual C++中使用内联汇编COM 组件设计与应用（一）COM组件设计与应用（二） 博客 博客中国 博客动力 blog blogdriver blogger 中国" 
+name=keywords><LINK href="http://wuxianghui.blogchina.com/blog/diary.css" 
+type=text/css rel=stylesheet>
+<SCRIPT language=JavaScript 
+src="http://wuxianghui.blogchina.com/jsp/js/UBB.js"></SCRIPT>
+
+<SCRIPT src="http://wuxianghui.blogchina.com/jsp/js/blog.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2912" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=container>
+<DIV id=header>
+<H1 class=title><A 
+href="http://wuxianghui.blogchina.com/blog/index.html">雪尽马蹄轻</A></H1></DIV>
+<DIV id=category><A title=上一篇 
+href="http://wuxianghui.blogchina.com/blog/3781892.html">在Visual C++中使用内联汇编</A>- 
+-| <A href="http://wuxianghui.blogchina.com/blog/index.html">回首页</A> | <A 
+href="http://wuxianghui.blogchina.com/blog/catalog_2005.html">2005年索引</A> | - 
+-<A title=下一篇 
+href="http://wuxianghui.blogchina.com/blog/3852769.html">COM组件设计与应用（二）</A></DIV>
+<DIV class=entity>
+<H2 class=diaryTitle>COM 
+组件设计与应用（一）</H2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<P>
+<P align=center><B>COM 组件设计与应用（一）<BR>起源及复合文件<BR></B><BR>作者：<A 
+href="mailto:good_yf@sina.com">杨老师</A></P>
+<P><B>一、前言</B><BR><BR>　　公元一九九五年某个夜黑风高的晚上，我的一位老师跟我说：“小杨呀，以后写程序就和搭积木一样啦。你赶快学习一些OLE的技术吧......”，当时我心里就寻思 
+：“开什么玩笑？搭积木方式写程序？再过100年吧......”，但作为一名听话的好学生，我开始在书店里“踅摸”（注1）有关OLE的书籍（注2）。功夫不负有心人，终于买到了我的第一本COM书《OLE2 
+高级编程技术》，这本800多页的大布头花费了我1/5的月工资呀......于是开始日夜耕读.....<BR>功夫不负有心人，我坚持读完了全部著作，感想是：这本书，在说什么呐？<BR>功夫不负有心人，我又读完了一遍大布头，感想是：咳~~~，没懂！<BR>功夫不负有心人，我再，我再,我再读 
+... 感想是：哦~~~，读懂了一点点啦，哈哈哈。<BR>...... 
+......<BR>功夫不负有心人，我终于，我终于懂了。<BR>800页的书对现在的我来说，其实也就10几页有用。到这时候才体会出什么叫“书越读越薄”的道理了。到后来，能买到的书也多了，上网也更方便更便宜了......<BR><BR>　　为了让VCKBASE上的朋友，不再经历我曾经的痛苦、不再重蹈我“无头苍蝇”般探索的艰辛、为了VCKBASE的蓬勃发展、为了中国软件事业的腾飞（糟糕，吹的太也高了）......我打算节约一些在 
+BBS 
+上赚分的时间，写个系列论文，就叫“COM组件设计与应用”吧。今天是第一部分——起源。<BR><BR><B>二、文件的存储</B><BR><BR>　　传说350年前，牛顿被苹果砸到了头，于是发现了万有引力。但到了二十一世纪的现在，任何一个技术的发明和发展，已经不再依靠圣人灵光的一闪。技术的进步转而是被社会的需求、商业的利益、竞争的压力、行业的渗透等推动的。微软在Windows平台上的组件技术也不例外，它的发明，有其必然因素。什么是这个因素那？答案是——文件的存储。<BR>　　打开记事本程序，输入了一篇文章后，保存。——这样的文件叫“非结构化文件”；<BR>　　打开电子表格程序，输入一个班的学生姓名和考试成绩，保存。——这样的文件叫“标准结构化文件”；<BR>　　在我们写的程序中，需要把特定的数据按照一定的结构和顺序写到文件中保存。——这样的文件叫“自定义结构化文件”；（比如 
+*.bmp 
+文件）<BR>　　以上三种类型的文件，大家都见的多了。那么文件存储就依靠上述的方式能满足所有的应用需求吗？恩~~~，至少从计算机发明后的50多年来，一直是够用的了。嘿嘿，下面看看商业利益的推动作用，对文件 
+的存储形式产生了什么变化吧。30岁以上的朋友，我估计以前都使用过以下几个著名的软件：WordStar（独霸DOS下的英文编辑软件），WPS（裘伯君写的中文编辑软件，据说当年的市场占有率高达90%，各种计算机培训班的必修课程），LOTUS-123（莲花公司出品的电子表格软件）......<BR>微软在成功地推出 
+Windows 3.1 后，开始垂涎桌面办公自动化软件领域。微软的 OFFICE 开发部门，各小组分别独立地开发了 WORD 和 EXCEL 
+等软件，并采用“自定义结构”方式，对文件进行存储。在激烈的市场竞争下，为了打败竞争对手，微软自然地产生了一个念头------如果我能在 WORD 程序中嵌入 
+EXCEL，那么用户在购买了我 WORD 软件的情况下，不就没有必要再买 LOTUS-123 
+了吗？！“恶毒”（中国微软的同志们看到了这个词，不要激动，我是加了引号的呀）的计划产生后，他们开始了实施工作，这就是 COM 的前身 OLE 
+的起源（注3）。但立刻就遇到了一个严重的技术问题：需要把 WORD 产生的 DOC 文件和 EXCEL 产生的 XLS 文件保存在一起。<BR>　 
+<TABLE cellSpacing=1 width="100%" border=1>
+  <TBODY>
+  <TR>
+    <TD width="33%">
+      <P align=center>方案</P></TD>
+    <TD width="31%">
+      <P align=center>优点</P></TD>
+    <TD width="103%">
+      <P align=center>缺点</P></TD></TR>
+  <TR>
+    <TD width="33%">建立一个子目录，把 DOC、XLS 存储在这同一个子目录中。</TD>
+    <TD width="31%">数据隔离性好，WORD 不用了解 EXCEL 的存储结构；容易扩展。</TD>
+    <TD width="103%">结构太松散，容易造成数据的损坏或丢失。<BR>不易携带。</TD></TR>
+  <TR>
+    <TD width="33%">修改文件存储结构，在DOC结构基础上扩展出包容 XLS 的结构。</TD>
+    <TD width="31%">结构紧密，容易携带和统一管理。</TD>
+    <TD width="103%">WORD 的开发人员需要通晓 EXCEL 
+  的存储格式；缺少扩展性，总不能新加一个类型就扩展一下结构吧？！</TD></TR></TBODY></TABLE></P>
+<P>以上两个方案，都有严重的缺陷，怎么解决那？如果能有一个新方案，能够合并前两个方案的优点，消灭缺点，该多好呀......微软是作磁盘操作系统起家的，于是很自然地他们提出了一个非常完美的设计方案，那就是把磁盘文件的管理方式移植到文件中了------复合文件，俗称“文件中的文件系统”。连微软当年都没有想到，就这么一个简单的想法，居然最后就演变出了 
+COM 组件程序设计的方法。可以说，复合文件是 COM 的基石。下图是磁盘文件组织方式与复合文件组织方式的类比图：<BR><IMG 
+src="http://www.vckbase.com/document/journal/vckbase43/images/stmtutpic1.jpg" 
+border=0><BR>图一、左侧表示一个磁盘下的文件组织方式，右侧表示一个复合文件内部的数据组织方式。<BR><BR><B>三、复合文件的特点</B> 
+</P>
+<OL>
+  <LI>复合文件的内部是使用指针构造的一棵树进行管理的。编写程序的时候要注意，由于使用的是单向指针，因此当做定位操作的时候，向后定位比向前定位要快； 
+  <LI>复合文件中的“流对象”，是真正保存数据的空间。它的存储单位为512字节。也就是说，即使你在流中只保存了一个字节的数据，它也要占据512字节的文件空间。啊~~~，这也太浪费了呀？不浪费！因为文件保存在磁盘上，即使一个字节也还要占用一个“簇”的空间那； 
+
+  <LI>不同的进程，或同一个进程的不同线程可以同时访问一个复合文件的不同部分而互不干扰； 
+  <LI>大家都有这样的体会，当需要往一个文件中插入一个字节的话，需要对整个文件进行操作，非常烦琐并且效率低下。而复合文件则提供了非常方便的“增量访问”能力； 
+
+  <LI>当频繁地删除文件，复制文件后，磁盘空间会变的很零碎，需要使用磁盘整理工具进行重新整合。和磁盘管理非常相似，复合文件也会产生这个问题，在适当的时候也需要整理，但比较简单，只要调用一个函数就可以完成了。 
+  </LI></OL>
+<P><B>四、浏览复合文件</B><BR><BR>　　VC6.0 
+附带了一个工具软件“复合文件浏览器”，文件名是“vc目录\Common\Tools\DFView.exe”。为了方便使用该程序，可以把它加到工具(tools)菜单中。方法是：Tools\Customize...\Tools卡片中增加新的项目。运行 
+DFView.exe，就可以打开一个复合文件进行观察了（注4）。但奇怪的是，在 Microsoft Visual Studio .NET 2003 
+中，我反而找不到这个工具程序了,汗！不过这恰好提供给大家一个练习的机会，在你阅读完本篇文章并掌握了编程方法后，自己写一个“复合文件浏览编辑器”程序，又练手了，还有实用的价值。<BR><BR><B>五</B><B>、复合文件函数</B><BR><BR>　　复合文件的函数和磁盘目录文件的操作非常类似。所有这些函数，被分为3种类型：WIN 
+API 全局函数，存储 IStorage 接口函数，流 IStream 
+接口函数。什么是接口？什么是接口函数？以后的文章中再陆续介绍，这里大家只要把“接口”看成是完成一组相关操作功能的函数集合就可以了。<BR>　 
+<TABLE cellSpacing=1 width="100%" border=1>
+  <TBODY>
+  <TR>
+    <TD width="17%">
+      <P align=center><B>WIN API 函数</B></P></TD>
+    <TD width="46%">
+      <P align=center><B>功能说明</B></P></TD></TR>
+  <TR>
+    <TD width="16%">StgCreateDocfile()</TD>
+    <TD width="47%">建立一个复合文件，得到根存储对象</TD></TR>
+  <TR>
+    <TD width="16%">StgOpenStorage()</TD>
+    <TD width="47%">打开一个复合文件，得到根存储对象</TD></TR>
+  <TR>
+    <TD width="16%">StgIsStorageFile()</TD>
+    <TD width="46%">判断一个文件是否是复合文件</TD></TR>
+  <TR>
+    <TD width="100%" colSpan=2>
+      <P align=center>　</P></TD></TR>
+  <TR>
+    <TD width="16%">
+      <P align=center><B>IStorage 函数</B></P></TD>
+    <TD width="46%">
+      <P align=center><B>功能说明</B></P></TD></TR>
+  <TR>
+    <TD width="16%">CreateStorage()</TD>
+    <TD width="46%">在当前存储中建立新存储，得到子存储对象</TD></TR>
+  <TR>
+    <TD width="16%">CreateStream()</TD>
+    <TD width="46%">在当前存储中建立新流，得到流对象</TD></TR>
+  <TR>
+    <TD width="16%">OpenStorage()</TD>
+    <TD width="46%">打开子存储，得到子存储对象</TD></TR>
+  <TR>
+    <TD width="16%">OpenStream()</TD>
+    <TD width="46%">打开流，得到流对象</TD></TR>
+  <TR>
+    <TD width="16%">CopyTo()</TD>
+    <TD width="46%">复制存储下的所有对象到目标存储中，该函数可以实现“整理文件，释放碎片空间”的功能</TD></TR>
+  <TR>
+    <TD width="16%">MoveElementTo()</TD>
+    <TD width="46%">移动对象到目标存储中</TD></TR>
+  <TR>
+    <TD width="16%">DestoryElement()</TD>
+    <TD width="46%">删除对象</TD></TR>
+  <TR>
+    <TD width="16%">RenameElement()</TD>
+    <TD width="46%">重命名对象</TD></TR>
+  <TR>
+    <TD width="16%">EnumElements()</TD>
+    <TD width="46%">枚举当前存储中所有的对象</TD></TR>
+  <TR>
+    <TD width="16%">SetElementTimes()</TD>
+    <TD width="46%">修改对象的时间</TD></TR>
+  <TR>
+    <TD width="16%">SetClass()</TD>
+    <TD width="46%">在当前存储中建立一个特殊的流对象，用来保存CLSID（注5）</TD></TR>
+  <TR>
+    <TD width="16%">Stat()</TD>
+    <TD width="46%">取得当前存储中的系统信息</TD></TR>
+  <TR>
+    <TD width="16%">Release()</TD>
+    <TD width="46%">关闭存储对象</TD></TR>
+  <TR>
+    <TD width="62%" colSpan=2>　</TD></TR>
+  <TR>
+    <TD width="16%">
+      <P align=center><B>IStream 函数</B></P></TD>
+    <TD width="46%">
+      <P align=center><B>功能说明</B></P></TD></TR>
+  <TR>
+    <TD width="16%">Read()</TD>
+    <TD width="46%">从流中读取数据</TD></TR>
+  <TR>
+    <TD width="16%">Write()</TD>
+    <TD width="46%">向流中写入数据</TD></TR>
+  <TR>
+    <TD width="16%">Seek()</TD>
+    <TD width="46%">定位读写位置</TD></TR>
+  <TR>
+    <TD width="16%">SetSize()</TD>
+    <TD width="46%">设置流尺寸。如果预先知道大小，那么先调用这个函数，可以提高性能</TD></TR>
+  <TR>
+    <TD width="16%">CopyTo()</TD>
+    <TD width="46%">复制流数据到另一个流对象中</TD></TR>
+  <TR>
+    <TD width="16%">Stat()</TD>
+    <TD width="46%">取得当前流中的系统信息</TD></TR>
+  <TR>
+    <TD width="16%">Clone()</TD>
+    <TD width="46%">克隆一个流对象，方便程序中的不同模块操作同一个流对象</TD></TR>
+  <TR>
+    <TD width="16%">Release()</TD>
+    <TD width="46%">关闭流对象</TD></TR>
+  <TR>
+    <TD width="62%" colSpan=2>　</TD></TR>
+  <TR>
+    <TD align=middle width="16%"><B>WIN API 补充函数</B></TD>
+    <TD align=middle width="46%"><B>功能说明</B></TD></TR>
+  <TR>
+    <TD width="16%">WriteClassStg()</TD>
+    <TD width="46%">写CLSID到存储中，同IStorage::SetClass()</TD></TR>
+  <TR>
+    <TD width="16%">ReadClassStg()</TD>
+    <TD width="46%">读出WriteClassStg()写入的CLSID，相当于简化调用IStorage::Stat()</TD></TR>
+  <TR>
+    <TD width="16%">WriteClassStm()</TD>
+    <TD width="46%">写CLSID到流的开始位置</TD></TR>
+  <TR>
+    <TD width="16%">ReadClassStm()</TD>
+    <TD width="46%">读出WriteClassStm()写入的CLSID</TD></TR>
+  <TR>
+    <TD width="16%">WriteFmtUserTypeStg()</TD>
+    <TD width="46%">写入用户指定的剪贴板格式和名称到存储中</TD></TR>
+  <TR>
+    <TD width="16%">ReadFmtUserTypeStg()</TD>
+    <TD width="46%">读出WriteFmtUserTypeStg()写入的信息。方便应用程序快速判断是否是它需要的格式数据。</TD></TR>
+  <TR>
+    <TD width="16%">CreateStreamOnHGlobal()</TD>
+    <TD width="46%">内存句柄 HGLOBAL 转换为流对象</TD></TR>
+  <TR>
+    <TD width="16%">GetHGlobalFromStream()</TD>
+    <TD 
+width="46%">取得CreateStreamOnHGlobal()调用中使用的内存句柄</TD></TR></TBODY></TABLE></P>
+<P>为了让大家快速地浏览和掌握基本方法，上面所列表的函数并不是全部，我省略了“事务”函数和未实现函数部分。更全面的介绍，请阅读 
+MSDN。<BR>下面程序片段，演示了一些基本函数功能和调用方法。 
+<BR>示例一：建立一个复合文件，并在其下建立一个子存储，在该子存储中再建立一个流，写入数据。</P><PRE>void SampleCreateDoc()
+{
+	::CoInitialize(NULL);	// COM 初始化
+				// 如果是MFC程序，可以使用AfxOleInit()替代
+
+	HRESULT hr;		// 函数执行返回值
+	IStorage *pStg = NULL;	// 根存储接口指针
+	IStorage *pSub = NULL;	// 子存储接口指针
+	IStream *pStm = NULL;	// 流接口指针
+
+	hr = ::StgCreateDocfile(	// 建立复合文件
+		L"c:\\a.stg",	// 文件名称
+		STGM_CREATE | STGM_WRITE | STGM_SHARE_EXCLUSIVE,	// 打开方式
+		0,		// 保留参数
+		&amp;pStg);		// 取得根存储接口指针
+	ASSERT( SUCCEEDED(hr) );	// 为了突出重点，简化程序结构，所以使用了断言。
+				// 在实际的程序中则要使用条件判断和异常处理
+
+	hr = pStg-&gt;CreateStorage(	// 建立子存储
+		L"SubStg",	// 子存储名称
+		STGM_CREATE | STGM_WRITE | STGM_SHARE_EXCLUSIVE,
+		0,0,
+		&amp;pSub);		// 取得子存储接口指针
+	ASSERT( SUCCEEDED(hr) );
+
+	hr = pSub-&gt;CreateStream(	// 建立流
+		L"Stm",		// 流名称
+		STGM_CREATE | STGM_WRITE | STGM_SHARE_EXCLUSIVE,
+		0,0,
+		&amp;pStm);		// 取得流接口指针
+	ASSERT( SUCCEEDED(hr) );
+
+	hr = pStm-&gt;Write(		// 向流中写入数据
+		"Hello",		// 数据地址
+		5,		// 字节长度(注意，没有写入字符串结尾的\0)
+		NULL);		// 不需要得到实际写入的字节长度
+	ASSERT( SUCCEEDED(hr) );
+
+	if( pStm )	pStm-&gt;Release();// 释放流指针
+	if( pSub )	pSub-&gt;Release();// 释放子存储指针
+	if( pStg )	pStg-&gt;Release();// 释放根存储指针
+
+	::CoUninitialize()		// COM 释放
+				// 如果使用 AfxOleInit(),则不调用该函数
+}</PRE><IMG 
+src="http://www.vckbase.com/document/journal/vckbase43/images/stmtutpic2.jpg" 
+border=0><BR>图二、运行示例程序一后，使用 DFView.exe 
+打开观察复合文件的效果图<BR><BR>示例二：打开一个复合文件，枚举其根存储下的所有对象。<PRE>#include &lt;atlconv.h&gt;	// ANSI、MBCS、UNICODE 转换
+
+void SampleEnum() 
+{	// 假设你已经做过 COM 初始化了
+
+	LPCTSTR lpFileName = _T( "c:\\a.stg" );
+	HRESULT hr;
+	IStorage *pStg = NULL;
+	
+	USES_CONVERSION;				// （注6）
+	LPCOLESTR lpwFileName = T2COLE( lpFileName );	// 转换T类型为宽字符
+	hr = ::StgIsStorageFile( lpwFileName );	// 是复合文件吗？
+	if( FAILED(hr) )	return;
+
+	hr = ::StgOpenStorage(			// 打开复合文件
+		lpwFileName,			// 文件名称
+		NULL,
+		STGM_READ | STGM_SHARE_DENY_WRITE,
+		0,
+		0,
+		&amp;pStg);				// 得到根存储接口指针
+
+	IEnumSTATSTG *pEnum=NULL;	// 枚举器
+	hr = pStg-&gt;EnumElements( 0, NULL, 0, &amp;pEnum );
+	ASSERT( SUCCEEDED(hr) );
+
+	STATSTG statstg;
+	while( NOERROR == pEnum-&gt;Next( 1, &amp;statstg, NULL) )
+	{
+		// statstg.type 保存着对象类型 STGTY_STREAM 或 STGTY_STORAGE
+		// statstg.pwcsName 保存着对象名称
+		// ...... 还有时间，长度等很多信息。请查看 MSDN
+
+		::CoTaskMemFree( statstg.pwcsName );	// 释放名称所使用的内存（注6）
+	}
+	
+	if( pEnum )	pEnum-&gt;Release();
+	if( pStg )	pStg-&gt;Release();
+}</PRE><B>六、小结</B><BR><BR>　　复合文件，结构化存储，是微软组件思想的起源，在此基础上继续发展出了持续性、命名、ActiveX、对象嵌入、现场激活......一系列的新技术、新概念。因此理解<ATLCONV.H 
+/>和<ATLCONV.H />掌握 
+复合文件是非常重要的，即使在你的程序中并没有全面使用组件技术，复合文件技术也是可以单独被应用的。祝大家学习快乐，为社会主义软件事业而奋斗:-)<BR><BR>留作业啦......<BR>作业1：写个小应用程序，从 
+MSWORD 的 doc 
+文件中，提取出附加信息（作者、公司......）。<BR>作业2：写个全功能的“复合文件浏览编辑器”。<BR><BR>注1：踅摸(xuemo)，动词，北方方言，寻找搜索的意思。<BR>注2：问：为什么不上网查资料学习？<BR>答：开什么国际玩笑！在那遥远的1995年代，我的500块工资，不吃不喝正好够上100小时的Internet网。<BR>注3：OLE，对象的连接与嵌入。<BR>注4：可以用 
+DFView.exe 打开 MSWORD 的 DOC 
+文件进行复合文件的浏览。但是该程序并没有实现国际化，不能打开中文文件名的复合文件，因此需要改名后才能浏览。<BR>注5：CLSID，在后续的文章中介绍。<BR>注6：关于 
+COM 中内存使用的问题，在后续的文章中介绍。
+<P></P>
+<P class=diaryFoot>【作者: <A 
+onclick="window.open('http://publishblog.blogchina.com/blog/postMessage.b?receiver=236548','发送短消息','width=520, height=455')" 
+href="javascript:void(0);">matsuri</A>】【访问统计:
+<SCRIPT language=JavaScript 
+src="http://counter.blogchina.com/PageServlet?pageid=3852763&amp;blogid=235864"></SCRIPT>
+】【2005年12月12日 星期一 09:15】【 <A 
+href="javascript:void(keyit=window.open('http://blogmark.blogchina.com/jsp/key/quickaddkey.jsp?k='+encodeURI('COM 组件设计与应用（一）')+'&amp;u='+encodeURI('http://wuxianghui.blogchina.com/wuxianghui/3852763.html')+'&amp;c='+encodeURI(''),'keyit','scrollbars=no,width=500,height=430,status=no,resizable=yes'));keyit.focus();">加入博采</A>】【<A 
+href="javascript:window.print();">打印</A>】 </TD></P></DIV>
+<DIV class=operation><A name=trackback>
+<H3>Trackback</H3></A>
+<P class=trackback>你可以使用这个链接引用该篇文章 
+http://publishblog.blogchina.com/blog/tb.b?diaryID=3852763 </P></DIV>
+<DIV class=operation><A name=relatedDiary>
+<H3>博客手拉手</H3></A>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=left><A title=人类绩效技术在企业组织中的应用 
+      href="http://ruijing02.blogchina.com/3751971.html" 
+      target=_blank>人类绩效技术在企业组织中的应用</A></TD>
+    <TD align=right><A title=http://ruijing02.blogchina.com/ 
+      href="http://ruijing02.blogchina.com/" target=_blank>ruijing02</A></TD></TR>
+  <TR>
+    <TD align=left><A title=网页设计中文字颜色的搭配技巧 
+      href="http://mssj.blogchina.com/3761897.html" 
+      target=_blank>网页设计中文字颜色的搭配技巧</A></TD>
+    <TD align=right><A title=http://mssj.blogchina.com/ 
+      href="http://mssj.blogchina.com/" target=_blank>じ☆玄冰晨释</A></TD></TR>
+  <TR>
+    <TD align=left><A title=www.feifa.com 
+      href="http://lx870115.blogchina.com/3760961.html" 
+      target=_blank>http://lx870115.blogchina.com/3760961.html</A></TD>
+    <TD align=right><A title=http://lx870115.blogchina.com/ 
+      href="http://lx870115.blogchina.com/" target=_blank>lx870115</A></TD></TR>
+  <TR>
+    <TD align=left><A title="在Java中应用设计模式 - Factory Method" 
+      href="http://bingchen2005.blogchina.com/3754701.html" 
+      target=_blank>在Java中应用设计模式 - Factory Method</A></TD>
+    <TD align=right><A title=http://bingchen2005.blogchina.com/ 
+      href="http://bingchen2005.blogchina.com/" target=_blank>冰晨</A></TD></TR>
+  <TR>
+    <TD align=left><A title=网站LOGO设计案例分析 
+      href="http://shaonanteacher.blogchina.com/3814793.html" 
+      target=_blank>网站LOGO设计案例分析</A></TD>
+    <TD align=right><A title=http://shaonanteacher.blogchina.com/ 
+      href="http://shaonanteacher.blogchina.com/" 
+  target=_blank>邵喃</A></TD></TR></TBODY></TABLE></DIV>
+<DIV class=operation><A name=comment>
+<H3>回复</H3></A>
+<TABLE cellSpacing=0 cellPadding=0 width=700 border=0>
+  <TBODY></TBODY></TABLE></DIV>
+<DIV class=operation>
+<TABLE class=comment cellSpacing=0 cellPadding=0 width=700 border=0>
+  <FORM id=replyForm method=post><INPUT type=hidden value=235864 name=blogID> 
+  <INPUT type=hidden value=3852763 name=diaryID> <INPUT type=hidden 
+  value=wuxianghui name=blogDomino>
+  <SCRIPT>
+if(getCookie('userID') == null){        
+document.write('<tr><td width="70">发布人：</td>');
+document.write('<td width="150"> <input name="remark.authorNameFUI" type="text" size="20" class="inputStyle" maxlength="20"></td>');
+document.write('<td width="70">邮箱：</td>');
+document.write('<td width="435"> <input name="remark.authorEmail" type="text" size="20" class="inputStyle" maxlength="40"></td>');
+document.write('</tr><tr><td>主　页：</td>');
+document.write('<td colspan="3"> <input name="remark.authorURL" type="text" class="inputStyle" value="HTTP://" size="63" maxlength="100"></td></tr>');
+}else{
+document.write('<input type="hidden" name="remark.authorNameFUI" value="Blogchina网友">');
+}
+</SCRIPT>
+   
+  <TBODY>
+  <TR align=left>
+    <TD colSpan=4>评论内容：<BR><TEXTAREA class=textStyle id=remark name=remark.remarkFUI rows=8 cols=60>          </TEXTAREA> 
+    </TD></TR>
+  <TR align=left>
+    <TD colSpan=4>　　　　　　 　　　　　　 <INPUT onclick=reply() type=button value=提交> 　 
+<INPUT type=reset value=重置> </TD></TR></FORM></TBODY></TABLE></DIV></DIV>
+<SCRIPT src="http://wuxianghui.blogchina.com/extend3.js" 
+type=text/javascript></SCRIPT>
+
+<DIV id=footer><A href="http://blog.bokee.com/">2003-2004 BOKEE.COM All rights 
+reserved</A><BR><A href="http://www.blogdriver.com/">Powered by BlogDriver 
+2.1</A> </DIV></BODY></HTML>
